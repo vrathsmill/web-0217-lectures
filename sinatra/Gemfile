@@ -3,12 +3,20 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem 'rake'
-gem 'sinatra-activerecord'
+  gem 'rake'
+  # tasks
+  gem 'sinatra'
+  # set database method
+  gem 'sinatra-activerecord'
+  # add tasks for managing our database
 
-gem 'require_all'
-
-gem 'activerecord', '<5'
-gem 'sqlite3'
+  gem 'require_all'
+  # load up relevant files
+  gem 'shotgun'
+  gem 'activerecord', '<5'
+  # million methods to connect ruby and our database
+  gem 'sqlite3'
+  # ruby code that connects us to the sqlite3 database
 
 gem 'pry-byebug'
+# debugging

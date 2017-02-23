@@ -33,3 +33,5 @@ The browser
         V
         C
       Rack.new(App.new)
+      
+      New stuff

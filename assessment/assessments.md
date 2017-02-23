@@ -1,8 +1,8 @@
-We want to see assess your comfort level with Object-Oriented Ruby, and sql.
+We want to see assess your comfort level with Object-Oriented Ruby, sql, and the parts of sinatra that we covered.
 
 To begin, please install the gem gist. Instructions available here: https://github.com/defunkt/gist
 
-When you're done, make a Gist of your entire folder and send it to us here: https://goo.gl/forms/k4iiBOsln6WeG7np1
+When you're done, make a Gist of your entire folder and send it to us here: https://goo.gl/forms/qVLFdR5MVzNyQNJq1
 
 
 Ruby

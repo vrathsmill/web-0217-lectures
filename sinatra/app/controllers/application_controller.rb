@@ -1,7 +1,6 @@
 class ApplicationController < Sinatra::Base
   set :views, 'app/views'
   get '/users' do
-
     users = User.all
     erb(:index)
 
@@ -23,6 +22,3 @@ class ApplicationController < Sinatra::Base
   #   erb.result(binding)
   # end
 end
-
-
-ApplicationController.new.

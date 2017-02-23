@@ -1,4 +1,4 @@
-class Review 
+class Review
   include Databaseable::InstanceMethods
   extend Databaseable::ClassMethods
 
@@ -8,16 +8,27 @@ class Review
     restaurant_id: "INTEGER"
   }
 
-  attr_accessor(*self.public_attributes)  
+  attr_accessor(*self.public_attributes)
   attr_reader :id
 
-  
+
 
   def customer
+    sql = <<-SQL
+      SELECT * FROM customers
+      INNER JOIN reviews ON reviews.customer_id = customer.id
+    SQL
+    self.class.db.execute(sql, self.id)
+    end
   end
 
   def restaurant
+    sql = <<-SQL
+      SELECT * FROM restaurants
+      INNER JOIN reviews ON reviews.restaurant_id = restaurants.id
+    SQL
+    self.class.db.execute(sql, self.id)
+    end
   end
 
 end
-

@@ -33,7 +33,8 @@ end
 
   patch '/users/:id' do
     @user = User.find_by_id(params[:id])
-    @user = User.update(params)
+    @user.update(params)
+#     @user = User.update(params)
     redirect to "/users/#{@user.id}"
   end
 

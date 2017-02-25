@@ -26,9 +26,11 @@ class Review
     sql = <<-SQL
       SELECT * FROM restaurants
       INNER JOIN reviews ON reviews.restaurant_id = restaurants.id
+      WHERE reviews.restaurant_id  = ?
     SQL
     self.class.db.execute(sql, self.id)
     end
+# Add something similar to this to the rest of your queries.
   end
 
 end
